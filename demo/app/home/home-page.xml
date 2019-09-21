@@ -1,12 +1,25 @@
 <Page class="page"
     navigatingTo="onNavigatingTo" 
-    xmlns="http://schemas.nativescript.org/tns.xsd">
+    xmlns="http://schemas.nativescript.org/tns.xsd"
+    xmlns:ui="nativescript-letter-avatar">
     
     <ActionBar class="action-bar">
         <Label class="action-bar-title" text="Home"></Label>
     </ActionBar>
 
-    <GridLayout>
-        <!-- Add your page content here -->
+    <GridLayout rows="auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto">
+        <ui:LetterAvatar row="0" text="AB"></ui:LetterAvatar>
+        <ui:LetterAvatar row="1" text="CD"></ui:LetterAvatar>
+        <ui:LetterAvatar row="2" text="EF"></ui:LetterAvatar>
+        <ui:LetterAvatar row="3" text="GH"></ui:LetterAvatar>
+        <ui:LetterAvatar row="4" text="IJ"></ui:LetterAvatar>
+        <ui:LetterAvatar row="5" text="KL"></ui:LetterAvatar>
+        <ui:LetterAvatar row="6" text="MN"></ui:LetterAvatar>
+        <ui:LetterAvatar row="7" text="OP"></ui:LetterAvatar>
+        <ui:LetterAvatar row="8" text="QR"></ui:LetterAvatar>
+        <ui:LetterAvatar row="9" text="ST"></ui:LetterAvatar>
+        <ui:LetterAvatar row="10" text="UV"></ui:LetterAvatar>
+        <ui:LetterAvatar row="11" text="WX"></ui:LetterAvatar>
+        <ui:LetterAvatar row="12" text="YZ"></ui:LetterAvatar>
     </GridLayout>
 </Page>

@@ -1,4 +1,4 @@
-import { Common } from './letter-avatar.common';
+import { LetterAvatar as Common } from './letter-avatar';
 export declare class LetterAvatar extends Common {
   // define your typings manually
   // or..
