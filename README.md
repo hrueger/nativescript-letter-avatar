@@ -1,40 +1,92 @@
-# Your Plugin Name
+# nativescript-letter-avatar
 
-Add your plugin badges here. See [nativescript-urlhandler](https://github.com/hypery2k/nativescript-urlhandler) for example.
+[![Build Status](https://travis-ci.org/hrueger/nativescript-letter-avatar.svg?branch=master)](https://travis-ci.org/hrueger/nativescript-letter-avatar) [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/hrueger/nativescript-letter-avatar/blob/master/LICENSE) [![Maintenance](https://img.shields.io/badge/Maintained-yes-green.svg)](https://github.com/hrueger/nativescript-letter-avatar/graphs/commit-activity) [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.png?v=103)](https://github.com/hrueger/nativescript-letter-avatar/)
 
-Then describe what's the purpose of your plugin. 
+With this plugin you can create beautiful looking letter avatars in your nativescript app!
 
-In case you develop UI plugin, this is where you can add some screenshots.
+## How it looks like
 
-## (Optional) Prerequisites / Requirements
-
-Describe the prerequisites that the user need to have installed before using your plugin. See [nativescript-firebase plugin](https://github.com/eddyverbruggen/nativescript-plugin-firebase) for example.
+![picture 1](./screenshots/01.jpg)
 
 ## Installation
 
-Describe your plugin installation steps. Ideally it would be something like:
-
-```javascript
-tns plugin add <your-plugin-name>
-```
+Install the plugin using `tns plugin add nativescript-letter-avatar`
 
 ## Usage 
+### NativeScript Core:
+Define the namespace
+```xml
+<Page class="page"
+    loaded="pageLoaded"
+    navigatingTo="onNavigatingTo" 
+    xmlns="http://schemas.nativescript.org/tns.xsd"
+    xmlns:ns="nativescript-letter-avatar">
+```
+Use the plugin:
+```xml
+<ns:LetterAvatar id="myAvatar" text="AB"></ns:LetterAvatar>
+```
 
-Describe any usage specifics for your plugin. Give examples for Android, iOS, Angular if needed. See [nativescript-drop-down](https://www.npmjs.com/package/nativescript-drop-down) for example.
-	
-	```javascript
-    Usage code snippets here
-    ```)
+You can add custom styles by using ids, classes or the tag selector in (s)css:
+```css
+LetterAvatar {
+    padding: 10;
+}
 
-## API
+.myAvatar {
+    padding: 30;
+    margin: 20;
+}
+```
 
-Describe your plugin methods and properties here. See [nativescript-feedback](https://github.com/EddyVerbruggen/nativescript-feedback) for example.
-    
-| Property | Default | Description |
-| --- | --- | --- |
-| some property | property default value | property description, default values, etc.. |
-| another property | property default value | property description, default values, etc.. |
-    
+For more info and examples check out the demo folder.
+
+### Angular Version:
+
+In your `app.module.ts` include the library like so:
+```typescript
+import { LetterAvatarModule } from "nativescript-letter-avatar/angular";
+```
+and add it to the imports array:
+```typescript
+@NgModule({
+    bootstrap:  [
+        ...
+    ],
+    declarations: [
+        ...
+    ],
+    imports: [
+        ...
+        LetterAvatarModule, // <--- add this here
+    ],
+    schemas: [
+        ...
+    ],
+})
+export class AppModule { }
+```
+
+The use it in your .html file:
+```html
+<LetterAvatar text="AB"></LetterAvatar>
+```
+
+You can add custom styles by using ids, classes or the tag selector in (s)css:
+```css
+LetterAvatar {
+    padding: 10;
+}
+
+.myAvatar {
+    padding: 30;
+    margin: 20;
+}
+```
+
+For more info and examples check out the demo-angular folder.
+
+
 ## License
 
-Apache License Version 2.0, January 2004
+MIT
