@@ -1,4 +1,5 @@
 import { GridLayout } from "tns-core-modules/ui/layouts/grid-layout";
+import { StackLayout } from "tns-core-modules/ui/layouts/stack-layout";
 import * as builder from "tns-core-modules/ui/builder";
 import { View, Property, CssProperty, Style } from "tns-core-modules/ui/page/page";
 import { CSSType } from "tns-core-modules/ui/layouts/layout-base";
@@ -9,13 +10,10 @@ export const heightProperty = new CssProperty<Style, number>({name: "height", cs
 export const widthProperty = new CssProperty<Style, number>({name: "width", cssName: "width", defaultValue: 50});
 export const borderRadiusProperty = new CssProperty<Style, number>({name: "borderRadius", cssName: "border-radius", defaultValue: 25});
 export const backgroundColorProperty = new CssProperty<Style, string>({name: "backgroundColor", cssName: "background-color", defaultValue: ""});
-export const paddingTopProperty = new CssProperty<Style, number>({name: "paddingTop", cssName: "padding-top", defaultValue: 5});
 export const fontSizeProperty = new CssProperty<Style, number>({name: "fontSize", cssName: "font-size", defaultValue: 30});
-export const verticalAlignProperty = new CssProperty<Style, string>({name: "verticalAlign", cssName: "vertical-align", defaultValue: "middle"});
-export const textAlignProperty = new CssProperty<Style, string>({name: "textAlign", cssName: "text-align", defaultValue: "center"});
 export const colorProperty = new CssProperty<Style, string>({name: "color", cssName: "color", defaultValue: "white"});
 
-@CSSType("LatterAvatar")
+@CSSType("LetterAvatar")
 export class LetterAvatar extends GridLayout {
   text: string;
   fontSize: number;
@@ -39,30 +37,57 @@ export class LetterAvatar extends GridLayout {
     "#d35400",
     "#c0392b",
 ];
+  stackLayout: StackLayout;
   constructor() {
     super();
 
+
+    this.stackLayout = new StackLayout();
     this.label = new Label();
-    this.label.height = this.height;
+    this.stackLayout.orientation = "horizontal";
+    this.label.verticalAlignment = "middle";
+    this.stackLayout.height = this.height;
     this.label.text = this.text;
+    this.stackLayout.width = this.width;
     this.label.width = this.width;
-    this.label.borderRadius = this.borderRadius;
+    this.stackLayout.borderRadius = this.borderRadius;
     this.label.color = this.color;
     this.label.fontSize = this.fontSize;
-    this.label.paddingTop = this.paddingTop;
     // @ts-ignore
-    this.label.textAlignment = this.textAlign;
+    this.label.textAlignment = "center";
     if (this.backgroundColor) {
-      this.label.backgroundColor = this.backgroundColor;
+      this.stackLayout.backgroundColor = this.backgroundColor;
     } else {
-      this.label.backgroundColor = this.flatColors[Math.floor(Math.random() *
+      this.stackLayout.backgroundColor = this.flatColors[Math.floor(Math.random() *
         this.flatColors.length)];
     }
-    this.addChild(this.label);
+
+    this.stackLayout.addChild(this.label);
+    this.addChild(this.stackLayout);
   }
 
   [textProperty.setNative](value: string) {
     this.label.text = value;
+  }
+  [heightProperty.setNative](value: number) {
+    this.stackLayout.height = value;
+  }
+  [widthProperty.setNative](value: number) {
+    this.label.width = value;
+    this.stackLayout.width = value;
+  }
+  [borderRadiusProperty.setNative](value: string) {
+    this.stackLayout.borderRadius = value;
+  }
+  [backgroundColorProperty.setNative](value: string) {
+    this.stackLayout.backgroundColor = value;
+  }
+  [colorProperty.setNative](value: string) {
+    // @ts-ignore
+    this.label.color = value;
+  }
+  [fontSizeProperty.setNative](value: number) {
+    this.label.fontSize = value;
   }
 }
 
@@ -75,13 +100,8 @@ widthProperty.register(LetterAvatar);
 borderRadiusProperty.register(LetterAvatar);
 // @ts-ignore
 backgroundColorProperty.register(LetterAvatar);
+
 // @ts-ignore
 colorProperty.register(LetterAvatar);
-// @ts-ignore
-paddingTopProperty.register(LetterAvatar);
-// @ts-ignore
-textAlignProperty.register(LetterAvatar);
-// @ts-ignore
-verticalAlignProperty.register(LetterAvatar);
 // @ts-ignore
 fontSizeProperty.register(LetterAvatar);
