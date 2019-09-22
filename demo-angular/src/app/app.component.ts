@@ -1,5 +1,3 @@
-import { LetterAvatar } from 'nativescript-letter-avatar';
-console.log(new LetterAvatar().message);
 import { Component } from "@angular/core";
 
 @Component({
