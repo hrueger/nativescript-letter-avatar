@@ -1,6 +1,6 @@
 # nativescript-letter-avatar
 
-[![Build Status](https://travis-ci.org/hrueger/nativescript-letter-avatar.svg?branch=master)](https://travis-ci.org/hrueger/nativescript-letter-avatar) [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/hrueger/nativescript-letter-avatar/blob/master/LICENSE) [![Maintenance](https://img.shields.io/badge/Maintained-yes-green.svg)](https://github.com/hrueger/nativescript-letter-avatar/graphs/commit-activity) [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.png?v=103)](https://github.com/hrueger/nativescript-letter-avatar/)
+[![Build Status](https://travis-ci.org/hrueger/nativescript-letter-avatar.svg?branch=master)](https://travis-ci.org/hrueger/nativescript-letter-avatar) [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/hrueger/nativescript-letter-avatar/blob/master/LICENSE) [![Maintenance](https://img.shields.io/badge/Maintained-yes-green.svg)](https://github.com/hrueger/nativescript-letter-avatar/graphs/commit-activity) [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.png?v=103)](https://github.com/hrueger/nativescript-letter-avatar/) [![Greenkeeper badge](https://badges.greenkeeper.io/hrueger/nativescript-letter-avatar.svg)](https://greenkeeper.io/)
 
 With this plugin you can create beautiful looking letter avatars in your nativescript app!
 
