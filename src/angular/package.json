@@ -2,7 +2,7 @@
     "name": "nativescript-letter-avatar",
     "main": "index.js",
     "devDependencies": {
-        "@angular/core": "8.2.7",
-        "nativescript-angular": "8.2.1"
+        "@angular/core": "8.2.13",
+        "nativescript-angular": "8.20.1"
     }
 }
