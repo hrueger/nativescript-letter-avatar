@@ -6,7 +6,7 @@
     <ListView [items]="items" class="list-group">
         <ng-template let-item="item">
             <GridLayout padding="5" columns="auto, *">
-                <LetterAvatar col="0" [text]="item"></LetterAvatar>
+                <LetterAvatar col="0" color="lightblue" padding="0" width="50" height="50" fontSize="20" borderRadius="10" [text]="item"></LetterAvatar>
                 <Label col="1" text="Here could be a username." class="list-group-item"></Label>
             </GridLayout>
         </ng-template>

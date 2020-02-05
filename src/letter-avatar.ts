@@ -1,17 +1,31 @@
 import { GridLayout } from "tns-core-modules/ui/layouts/grid-layout";
 import { StackLayout } from "tns-core-modules/ui/layouts/stack-layout";
 import * as builder from "tns-core-modules/ui/builder";
-import { View, Property, CssProperty, Style } from "tns-core-modules/ui/page/page";
+import { View, Property, CssProperty, Style, Color } from "tns-core-modules/ui/page/page";
 import { CSSType } from "tns-core-modules/ui/layouts/layout-base";
 import { Label } from "tns-core-modules/ui/label";
 
-export const textProperty = new Property<LetterAvatar, string>({ name: "text", defaultValue: "" });
-export const heightProperty = new CssProperty<Style, number>({name: "height", cssName: "height", defaultValue: 50});
-export const widthProperty = new CssProperty<Style, number>({name: "width", cssName: "width", defaultValue: 50});
-export const borderRadiusProperty = new CssProperty<Style, number>({name: "borderRadius", cssName: "border-radius", defaultValue: 25});
-export const backgroundColorProperty = new CssProperty<Style, string>({name: "backgroundColor", cssName: "background-color", defaultValue: ""});
-export const fontSizeProperty = new CssProperty<Style, number>({name: "fontSize", cssName: "font-size", defaultValue: 30});
-export const colorProperty = new CssProperty<Style, string>({name: "color", cssName: "color", defaultValue: "white"});
+const defaults = {
+  text: "",
+  height: "auto",
+  width: "auto",
+  borderRadius: 0,
+  backgroundColor: "",
+  fontSize: 15,
+  color: "white",
+  margin: 0,
+  padding: 0,
+};
+
+export const textProperty = new Property<LetterAvatar, string>({ name: "text", defaultValue: defaults.text });
+export const heightProperty = new Property<LetterAvatar, number | string>({name: "height", defaultValue: defaults.height});
+export const widthProperty = new Property<LetterAvatar, number | string>({name: "width", defaultValue: defaults.width});
+export const borderRadiusProperty = new Property<LetterAvatar, number>({name: "borderRadius", defaultValue: defaults.borderRadius});
+export const backgroundColorProperty = new Property<LetterAvatar, string>({name: "backgroundColor", defaultValue: defaults.backgroundColor});
+export const fontSizeProperty = new Property<LetterAvatar, number>({name: "fontSize", defaultValue: defaults.fontSize});
+export const colorProperty = new Property<LetterAvatar, string>({name: "color", defaultValue: defaults.color});
+export const marginProperty = new Property<LetterAvatar, number>({name: "margin", defaultValue: defaults.margin});
+export const paddingProperty = new Property<LetterAvatar, number>({name: "padding", defaultValue: defaults.padding});
 
 @CSSType("LetterAvatar")
 export class LetterAvatar extends GridLayout {
@@ -46,14 +60,16 @@ export class LetterAvatar extends GridLayout {
     this.label = new Label();
     this.stackLayout.orientation = "horizontal";
     this.label.verticalAlignment = "middle";
-    this.stackLayout.height = this.height;
-    this.label.text = this.text;
-    this.stackLayout.width = this.width;
-    this.label.width = this.width;
-    this.stackLayout.borderRadius = this.borderRadius;
-    this.label.color = this.color;
-    this.label.fontSize = this.fontSize;
     // @ts-ignore
+    this.stackLayout.height = this.height ? this.height : defaults.height;
+    this.label.text = this.text ? this.text : defaults.text;
+    // @ts-ignore
+    this.stackLayout.width = this.width ? this.width : defaults.width;
+    // @ts-ignore
+    this.label.width = this.width ? this.width : defaults.width;
+    this.stackLayout.borderRadius = this.borderRadius ? this.borderRadius : defaults.borderRadius;
+    this.label.color = this.color ? this.color : new Color(defaults.color);
+    this.label.fontSize = this.fontSize ? this.fontSize : defaults.fontSize;
     this.label.textAlignment = "center";
     if (this.backgroundColor) {
       this.stackLayout.backgroundColor = this.backgroundColor;
@@ -89,19 +105,20 @@ export class LetterAvatar extends GridLayout {
   [fontSizeProperty.setNative](value: number) {
     this.label.fontSize = value;
   }
+  [marginProperty.setNative](value: number) {
+    this.stackLayout.margin = value;
+  }
+  [paddingProperty.setNative](value: number) {
+    this.stackLayout.padding = value;
+  }
 }
 
-textProperty.register(LetterAvatar);
-// @ts-ignore
-heightProperty.register(LetterAvatar);
-// @ts-ignore
-widthProperty.register(LetterAvatar);
-// @ts-ignore
-borderRadiusProperty.register(LetterAvatar);
-// @ts-ignore
 backgroundColorProperty.register(LetterAvatar);
-
-// @ts-ignore
+borderRadiusProperty.register(LetterAvatar);
 colorProperty.register(LetterAvatar);
-// @ts-ignore
 fontSizeProperty.register(LetterAvatar);
+heightProperty.register(LetterAvatar);
+marginProperty.register(LetterAvatar);
+paddingProperty.register(LetterAvatar);
+textProperty.register(LetterAvatar);
+widthProperty.register(LetterAvatar);

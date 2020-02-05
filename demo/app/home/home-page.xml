@@ -8,18 +8,18 @@
     </ActionBar>
 
     <GridLayout rows="auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto">
-        <ui:LetterAvatar row="0" text="AB"></ui:LetterAvatar>
-        <ui:LetterAvatar row="1" text="CD"></ui:LetterAvatar>
-        <ui:LetterAvatar row="2" text="EF"></ui:LetterAvatar>
-        <ui:LetterAvatar row="3" text="GH"></ui:LetterAvatar>
-        <ui:LetterAvatar row="4" text="IJ"></ui:LetterAvatar>
-        <ui:LetterAvatar row="5" text="KL"></ui:LetterAvatar>
-        <ui:LetterAvatar row="6" text="MN"></ui:LetterAvatar>
-        <ui:LetterAvatar row="7" text="OP"></ui:LetterAvatar>
-        <ui:LetterAvatar row="8" text="QR"></ui:LetterAvatar>
-        <ui:LetterAvatar row="9" text="ST"></ui:LetterAvatar>
-        <ui:LetterAvatar row="10" text="UV"></ui:LetterAvatar>
-        <ui:LetterAvatar row="11" text="WX"></ui:LetterAvatar>
-        <ui:LetterAvatar row="12" text="YZ"></ui:LetterAvatar>
+        <ui:LetterAvatar row="0" text="AB" color="lightblue" padding="0" width="50" height="50" fontSize="20" borderRadius="10"></ui:LetterAvatar>
+        <ui:LetterAvatar row="1" text="CD" color="lightblue" padding="0" width="50" height="50" fontSize="20" borderRadius="10"></ui:LetterAvatar>
+        <ui:LetterAvatar row="2" text="EF" color="lightblue" padding="0" width="50" height="50" fontSize="20" borderRadius="10"></ui:LetterAvatar>
+        <ui:LetterAvatar row="3" text="GH" color="lightblue" padding="0" width="50" height="50" fontSize="20" borderRadius="10"></ui:LetterAvatar>
+        <ui:LetterAvatar row="4" text="IJ" color="lightblue" padding="0" width="50" height="50" fontSize="20" borderRadius="10"></ui:LetterAvatar>
+        <ui:LetterAvatar row="5" text="KL" color="lightblue" padding="0" width="50" height="50" fontSize="20" borderRadius="10"></ui:LetterAvatar>
+        <ui:LetterAvatar row="6" text="MN" color="lightblue" padding="0" width="50" height="50" fontSize="20" borderRadius="10"></ui:LetterAvatar>
+        <ui:LetterAvatar row="7" text="OP" color="lightblue" padding="0" width="50" height="50" fontSize="20" borderRadius="10"></ui:LetterAvatar>
+        <ui:LetterAvatar row="8" text="QR" color="lightblue" padding="0" width="50" height="50" fontSize="20" borderRadius="10"></ui:LetterAvatar>
+        <ui:LetterAvatar row="9" text="ST" color="lightblue" padding="0" width="50" height="50" fontSize="20" borderRadius="10"></ui:LetterAvatar>
+        <ui:LetterAvatar row="10" text="UV" color="lightblue" padding="0" width="50" height="50" fontSize="20" borderRadius="10"></ui:LetterAvatar>
+        <ui:LetterAvatar row="11" text="WX" color="lightblue" padding="0" width="50" height="50" fontSize="20" borderRadius="10"></ui:LetterAvatar>
+        <ui:LetterAvatar row="12" text="YZ" color="lightblue" padding="0" width="50" height="50" fontSize="20" borderRadius="10"></ui:LetterAvatar>
     </GridLayout>
 </Page>
