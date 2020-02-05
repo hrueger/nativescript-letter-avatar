@@ -4,24 +4,12 @@
 
 With this plugin you can create beautiful looking letter avatars in your nativescript app!
 
-<table>
-<tr>
-<td>
-
-## How it looks like
-
 ![picture 1](./screenshots/01.jpg)
-</td>
-<td>
 
 ## Installation
 
 Install the plugin from using `tns plugin add nativescript-letter-avatar`.
 
-
-</td>
-</tr>
-</table>
 
 ## Usage 
 ### NativeScript Core:
