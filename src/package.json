@@ -37,7 +37,7 @@
 		"iOS"
 	],
 	"author": {
-		"name": "H. Rüger"
+		"name": "H.Rüger"
 	},
 	"bugs": {
 		"url": "https://github.com/hrueger/nativescript-letter-avatar/issues"
@@ -51,10 +51,10 @@
 		"prompt": "^1.0.0",
 		"rimraf": "^3.0.1",
 		"tslint": "^6.0.0",
-		"semver": "^7.1.2"
-	},
-	"dependencies": {
+		"semver": "^7.1.2",
+		"@angular/core": "8.2.14",
 		"rxjs": "^6.5.4"
 	},
+	"dependencies": {},
 	"bootstrapper": "nativescript-plugin-seed"
 }
