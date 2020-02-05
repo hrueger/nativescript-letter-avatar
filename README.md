@@ -27,17 +27,12 @@ Use the plugin:
 <ns:LetterAvatar id="myAvatar" text="AB"></ns:LetterAvatar>
 ```
 
-You can add custom styles by using ids, classes or the tag selector in (s)css:
-```css
-LetterAvatar {
-    padding: 10;
-}
-
-.myAvatar {
-    padding: 30;
-    margin: 20;
-}
+You can also add custom styles:
+```html
+<ns:LetterAvatar color="blue" padding="5" borderRadius="7" id="myAvatar" text="AB"></ns:LetterAvatar> 
 ```
+
+> Unfortunately, CSS properties are not supported.
 
 For more info and examples check out the demo folder.
 
@@ -72,19 +67,14 @@ The use it in your .html file:
 <LetterAvatar text="AB"></LetterAvatar>
 ```
 
-You can add custom styles by using ids, classes or the tag selector in (s)css:
-```css
-LetterAvatar {
-    padding: 10;
-}
-
-.myAvatar {
-    padding: 30;
-    margin: 20;
-}
+You can add custom styles:
+```html
+<LetterAvatar color="blue" padding="5" borderRadius="7" text="AB"></LetterAvatar>
 ```
 
-For more info and examples check out the demo-angular folder.
+> Unfortunately, CSS properties are not supported.
+
+For more info and examples check out the [demo](./demo) and the [demo-angular](./demo-angular) folder.
 
 
 ## License
