@@ -1,4 +1,7 @@
-# nativescript-letter-avatar
+># ⚠ Please use [`@schoolsquirrel/letter-avatar`](https://github.com/SchoolSquirrel/nativescript-plugins/tree/main/packages/letter-avatar)
+
+
+## nativescript-letter-avatar
 
 [![Build](https://github.com/hrueger/nativescript-letter-avatar/workflows/Build/badge.svg)](https://github.com/hrueger/nativescript-letter-avatar/actions) [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/hrueger/nativescript-letter-avatar/blob/master/LICENSE) [![Maintenance](https://img.shields.io/badge/Maintained-yes-green.svg)](https://github.com/hrueger/nativescript-letter-avatar/graphs/commit-activity) [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.png?v=103)](https://github.com/hrueger/nativescript-letter-avatar/)
 
